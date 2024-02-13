@@ -1,2 +1,2 @@
 #!/bin/sh
-sed -i "$(grep -n skin= ~/.config/audacious/config | cut -d: -f1)s/Skins\/.*/Skins\/$(find ~/.local/share/audacious/Skins -type f -printf '%f\n' | shuf -n 1)/" ~/.config/audacious/config
+sed -i "s/Skins\/.*/Skins\/$(find ~/.local/share/audacious/Skins -type f -printf '%f\n' | shuf -n 1)/" ~/.config/audacious/config
